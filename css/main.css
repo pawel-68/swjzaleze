@@ -1,0 +1,238 @@
+/* COMMON STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Raleway', sans-serif;;
+}
+
+:root {
+    --inner-shadow-height: 10px;
+}
+
+.container {
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+
+    /* border: 1px solid #fff; */
+}
+
+/* COMMON STYLES - FORMATTING */
+
+.bold {
+    font-weight: bold;
+}
+
+.h2 {
+    font-size: 3rem;
+}
+
+
+.flex-end {
+    display: flex;
+    justify-content: end;
+}
+
+/* NAV */
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    height: 5vh;
+    background-image: url('../img/church2.jpg');
+    background-repeat: no-repeat;
+    /* background-position: 0 60%; */
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 10;
+}
+
+.header-2 {
+    outline: none;
+    height: 95vh;
+    background-image: url('../img/church2.jpg');
+    background-repeat: no-repeat;
+    /* background-position: 0 -1px; */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* SECTIONS */
+
+section {
+    position: relative;
+    padding: 60px 0;
+    min-height: 40vh;
+}
+
+
+.inner::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--inner-shadow-height);
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.inner::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: var(--inner-shadow-height);
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+.section-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.section-text {
+    position: relative;
+    width: fit-content;
+    padding: 45px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #fff;
+    max-width: 60%;
+
+    /* border: 1px solid orange; */
+}
+
+.section-text h2 {
+    margin-bottom: 40px;
+
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: 5px;
+
+}
+
+.section-text p
+,.section-text ul {
+    font-size: 2.5rem;
+}
+
+.section-text ul li {
+    list-style: none;
+    margin-left: 20px;
+    padding: 20px 0 0 0;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+/* SECTIONS - NEWS */
+
+.news {
+    background-color: #e7e7e7;
+}
+
+.news ul li {
+    position: relative;
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-left: 20px;
+    list-style: none;
+    line-height: 3rem;
+}
+
+/* SECTIONS - HOLY MASSES */
+
+.holy-masses {
+    background-image: url('../img/holy_mass.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: -25vw 0;
+}
+
+.section-hero--holy-masses {
+    background-image: linear-gradient(to right,
+        rgba(134, 34, 34, 0.05), rgb(134, 34, 34) 40%
+        ,rgb(134, 34, 34) 40%, rgb(134, 34, 34));
+}
+
+/* SECTIONS - CONFESSION */
+
+.confession {
+    background-image: url('../img/confession.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section-hero--confession {
+    background-image: linear-gradient(to right,
+        rgba(87, 34, 134, 0.05), rgba(87, 34, 134) 40%
+        ,rgba(87, 34, 134) 40%, rgba(87, 34, 134));
+}
+
+/* TECHNICAL */
+
+.break {
+    position: absolute;
+    border-left-width: 1px;
+    border-left-color: red;
+    border-right-width: 1px;
+    border-right-color: red;
+    height: 500vh;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: none;
+}
+
+.break-1400 {
+    width: 1400px;
+    border-left-style: solid;
+    border-right-style: solid;
+}
+
+.break-1200 {
+    width: 1200px;
+    border-left-style: solid;
+    border-right-style: solid;
+}
+
+.break-992 {
+    width: 992px;
+    border-left-style: solid;
+    border-right-style: solid;
+}
+
+.break-576 {
+    width: 576px;
+    border-left-style: solid;
+    border-right-style: solid;
+}
