@@ -20,10 +20,22 @@ html {
     width: 1400px;
     margin: 0 auto;
 
-    /* border: 1px solid #fff; */
+    /* border: 1px solid green; */
 }
 
 /* COMMON STYLES - FORMATTING */
+
+.inline-block {
+    display: inline-block;
+}
+
+.w-2 {
+    width: 20px;
+}
+
+.text-right {
+    text-align: right;
+}
 
 .bold {
     font-weight: bold;
@@ -33,10 +45,32 @@ html {
     font-size: 3rem;
 }
 
+.mt-4 {
+    margin-top: 40px;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mr-1 {
+    margin-right: 10px;
+}
+
+.display-flex {
+    display: flex;
+}
 
 .flex-end {
-    display: flex;
     justify-content: end;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-align-center {
+    align-items: center;
 }
 
 /* NAV */
@@ -44,25 +78,37 @@ html {
 /* HEADER */
 
 header {
-    position: sticky;
-    top: 0;
-    height: 5vh;
+    position: relative;
+    height: 90vh;
     background-image: url('../img/church2.jpg');
     background-repeat: no-repeat;
-    /* background-position: 0 60%; */
+    background-position: 0 80%;
     background-size: cover;
     background-attachment: fixed;
     z-index: 10;
+    filter: saturate(.6);
 }
 
 .header-2 {
-    outline: none;
-    height: 95vh;
-    background-image: url('../img/church2.jpg');
+    position: sticky;
+    height: 10vh;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(#ffffffec, #ffffffec), url('../img/church2.jpg');
     background-repeat: no-repeat;
-    /* background-position: 0 -1px; */
+    background-position: 0 80%;
     background-size: cover;
     background-attachment: fixed;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    color: #333;
 }
 
 /* MAIN */
@@ -180,6 +226,10 @@ section {
     background-image: linear-gradient(to right,
         rgba(134, 34, 34, 0.05), rgb(134, 34, 34) 40%
         ,rgb(134, 34, 34) 40%, rgb(134, 34, 34));
+}
+
+.holy-masses .section-text p {
+    font-size: 2rem;
 }
 
 /* SECTIONS - CONFESSION */
