@@ -16,21 +16,23 @@
     <div class="break break-576"></div>
 
 
-    <header class="display-flex flex-align-end">
+    <div class="first-screen display-flex flex-align-end">
         <div class="container display-flex flex-center">
             <div class="header-animation">
                 <p class="arrow"><a href="#header">⮞</a></p>
             </div>
         </div>
-    </header>
-    <div class="header-2 display-flex flex-align-center flex-center" id="header">
+    </div>
+
+    <header class="header display-flex flex-align-center flex-center" id="header">
         <div class="header-text">
             <div class="container">
-                <div class="header-2__circle"></div>
+                <div class="header__circle"></div>
                 <h1>Parafia Świętego Józefa w Katowicach-Załężu</h1>
             </div>
         </div>
-    </div>
+    </header>
+
     <main>
         <section class="news">
             <div class="container">
@@ -45,11 +47,12 @@
                 </ul>
             </div>
             </section>
+
             <section class="holy-masses inner">
                 <div class="section-hero section-hero--holy-masses"></div>
             <div class="container display-flex flex-end">
-                <div class="holly-masses__text section-text section-text--right">
-                    <h2>Msze święte</h2>
+                <div class="holly-masses__text section-text">
+                    <h3>Msze święte</h3>
                     <p>
                         <ul>
                             <li><span class="mr-1">W niedziele:</span> 07:00, 09:00, 10:30*, 12:00, 15:00**, 17:00</li>
@@ -71,14 +74,51 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="cards"></section>
-        <section class="services inner"></section> -->
+
+        <section class="cards"></section>
+        
+        <section class="services inner" id="services">
+            <div class="section-hero section-hero--services"></div>
+            <div class="container display-flex flex-start">
+                <div class="confession__text section-text">
+                    <h3>Nabożeństwa</h3>
+                    <p>
+                        <ul>
+                            <li><span class="mr-1">Nieszpory:</span> niedziele i święta nakazane o 16.30</li>
+                            <li><span class="mr-1">Nowenna do MB Nieustającej Pomocy:</span> wtorek o 17.30</li>
+                            <li><span class="mr-1">Nowenna do św. Józefa:</span> środa, po Mszy św. wieczornej</li>
+                            <li><span class="mr-1">Nabożeństwo o nowe powołania:</span> I czwartek miesiąca, po Mszy św. o 8.00</li>
+                            <li><span class="mr-1">Nabożeństwo do NSPJ:</span> I piątek miesiąca, po Mszy św. o 8.00</li>
+                            <li><span class="mr-1">Nabożeństwo do Bożego Miłosierdzia:</span> III piątek miesiąca, po Mszy św. wieczornej</li>
+                            
+                            <li>
+                                Nabożeństwa Różańcowe w październiku:
+                                <ul>
+                                    <li>poniedziałek - piątek o 17.15</li>
+                                    <li>sobota - niedziela o 16.15</li>
+                                </ul>
+                            </li>
+                            <li><span class="mr-1">Droga Krzyżowa:</span> piątki Wielkiego Postu o 17.15 i dodatkowo w Wielki Piątek o 9.00</li>
+                            <li><span class="mr-1">Gorzkie Żale:</span> Niedziele Wielkiego Postu o 16.15</li>
+                            <li>Nabożeństwa majowe:
+                                <ul>
+                                    <li>poniedziałek - piątek o 17.30</li>
+                                    <li>sobota - niedziela o 16.30</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <section class="payments"></section>
+
         <section class="confession inner">
             <div class="section-hero section-hero--confession"></div>
             <div class="container display-flex flex-end">
-                <div class="confession__text section-text section-text--right">
-                    <h2>Sakrament pokuty i pojednania</h2>
+                <div class="confession__text section-text">
+                    <h3>Sakrament pokuty i pojednania</h3>
                     <p>
                         Okazja do spowiedzi:<br>
                         <ul>
@@ -90,6 +130,7 @@
                 </div>
             </div>
         </section>
+
         <section class="gallery"></section>
     </main>
     <footer>

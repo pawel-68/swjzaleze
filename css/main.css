@@ -66,6 +66,10 @@ html {
     justify-content: end;
 }
 
+.flex-start {
+    justify-content: start;
+}
+
 .flex-center {
     justify-content: center;
 }
@@ -82,9 +86,10 @@ html {
 
 /* HEADER */
 
-header {
+.first-screen {
     position: relative;
-    height: 90vh;
+    height: 85vh;
+    background-color: #fff;
     background-image: url('../img/church2.jpg');
     background-repeat: no-repeat;
     background-position: 0 90%;
@@ -106,35 +111,25 @@ header {
     text-shadow: 5px 5px 10px rgb(37, 37, 37);
 }
 
-/* .arrow::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-    border: 1px solid white;
-} */
-
 .arrow a {
-    color: #fff;
+    position: relative;
+    color: #ffffffe0;
     text-decoration: none;
+    overflow: hidden;
 }
 
-.header-2 {
+
+.header {
     position: sticky;
     height: 10vh;
-    top: 0;
+    top: 0px;
     width: 100%;
     background-color: #fff;
-    border: none;
-    z-index: 9;
+    z-index: 5;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -20px;
 }
 
-.header-2__circle {
+.header__circle {
     position: absolute;
     top: -70px;
     width: 160px;
@@ -244,7 +239,7 @@ section {
     /* border: 1px solid orange; */
 }
 
-.section-text h2 {
+.section-text h3 {
     margin-bottom: 40px;
 
     text-transform: uppercase;
@@ -296,11 +291,27 @@ section {
 .section-hero--holy-masses {
     background-image: linear-gradient(to right,
         rgba(134, 34, 34, 0.05), rgb(134, 34, 34) 40%
-        ,rgb(134, 34, 34) 40%, rgb(134, 34, 34));
+        ,rgb(134, 34, 34) 40%);
 }
 
 .holy-masses .section-text p {
     font-size: 2rem;
+}
+
+/* SECTIONS - SERVICES */
+
+.services {
+    background-image: url('../img/services.JPG');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 45vw 0;
+}
+
+.section-hero--services {
+    background-image: linear-gradient(to left,
+        rgba(34, 57, 134, 0.05), rgb(34, 57, 134) 40%
+        ,rgb(34, 57, 134) 40%);
 }
 
 /* SECTIONS - CONFESSION */
@@ -315,7 +326,7 @@ section {
 .section-hero--confession {
     background-image: linear-gradient(to right,
         rgba(87, 34, 134, 0.05), rgba(87, 34, 134) 40%
-        ,rgba(87, 34, 134) 40%, rgba(87, 34, 134));
+        ,rgba(87, 34, 134) 40%);
 }
 
 /* TECHNICAL */
