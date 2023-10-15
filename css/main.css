@@ -1,116 +1,180 @@
 /* COMMON STYLES */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 html {
-    font-size: 62.5%;
-    font-family: 'Raleway', sans-serif;;
+	font-size: 62.5%;
+	font-family: "Raleway", sans-serif;
 }
 
 :root {
-    --inner-shadow-height: 10px;
+	--inner-shadow-height: 10px;
+	--header-height: 10vh;
 }
 
 .container {
-    position: relative;
-    width: 1400px;
-    margin: 0 auto;
+	position: relative;
+	width: 1400px;
+	margin: 0 auto;
 
-    /* border: 1px solid green; */
+	/* border: 1px solid green; */
 }
 
 /* COMMON STYLES - FORMATTING */
 
 .inline-block {
-    display: inline-block;
+	display: inline-block;
 }
 
 .w-2 {
-    width: 20px;
+	width: 20px;
+}
+
+.h-100-p {
+	height: 100%;
 }
 
 .text-right {
-    text-align: right;
+	text-align: right;
 }
 
 .bold {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .h2 {
-    font-size: 3rem;
+	font-size: 3rem;
 }
 
 .mt-4 {
-    margin-top: 40px;
+	margin-top: 40px;
 }
 
 .mb-1 {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .mr-1 {
-    margin-right: 10px;
+	margin-right: 10px;
 }
 
 .display-flex {
-    display: flex;
+	display: flex;
 }
 
 .flex-column {
-    flex-direction: column;
+	flex-direction: column;
 }
 
-
 .flex-start {
-    justify-content: start;
+	justify-content: start;
 }
 
 .flex-center {
-    justify-content: center;
+	justify-content: center;
 }
 
 .flex-around {
-    justify-content: space-around;
+	justify-content: space-around;
 }
 
 .flex-end {
-    justify-content: end;
+	justify-content: end;
 }
 
 .flex-center {
-    justify-content: center;
+	justify-content: center;
 }
 
 .flex-align-center {
-    align-items: center;
+	align-items: center;
 }
 
 .flex-align-end {
-    align-items: end;
+	align-items: end;
+}
+
+/* BURGER MENU */
+
+.burger-menu-container {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: var(--header-height);
+	z-index: 20;
+}
+
+.burger-menu {
+	padding: 3rem;
+	border: 1px solid transparent;
+	background-color: transparent;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.burger-menu:focus {
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+}
+
+.burger-menu__bars,
+.burger-menu__bars::before,
+.burger-menu__bars::after {
+	position: absolute;
+	display: block;
+	width: 3rem;
+	height: 3px;
+	background-color: #000;
+	transition: transform 0.7s;
+}
+
+.burger-menu__bars::before {
+	content: "";
+	top: -0.8rem;
+}
+
+.burger-menu__bars::after {
+	content: "";
+	top: 0.8rem;
+}
+
+.burger-menu__bars--active {
+	transform: rotate(45deg);
+}
+
+.burger-menu__bars--active::before {
+	transform: translateY(0.8rem) rotate(-90deg);
+}
+
+.burger-menu__bars--active::after {
+	transform: translateY(-0.8rem) rotate(-90deg);
 }
 
 /* NAV */
 
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 15;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 15;
 
-    transform: translateX(-100%);
-	transition: transform .6s ease-in-out;
+	transform: translateX(-150%);
+	transition: transform 0.6s ease-in-out;
 }
 
 .nav--active {
-    transform: translateX(0);
+	transform: translateX(0);
 }
 
 .main-menu-container {
@@ -121,7 +185,7 @@ html {
 }
 
 .main-menu__list {
-    height: 80%;
+	height: 80%;
 }
 
 .main-menu__list li {
@@ -138,13 +202,13 @@ html {
 .main-menu__list li a {
 	color: #fff;
 	font-size: 5rem;
-    font-weight: 600;
+	font-weight: 600;
 	text-transform: uppercase;
 	text-decoration: none;
 }
 
 .main-menu__list li:hover a {
-	color: rgb(163, 163, 163);
+	color: rgb(182, 161, 98);
 }
 
 .main-menu__list li::before {
@@ -166,284 +230,352 @@ html {
 /* HEADER */
 
 .first-screen {
-    position: relative;
-    height: 85vh;
-    background-color: #fff;
-    background-image: url('../img/church2.jpg');
-    background-repeat: no-repeat;
-    background-position: 0 90%;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: 10;
-    filter: saturate(.6);
+	position: relative;
+	height: 85vh;
+	background-color: #fff;
+	background-image: url("../img/church2.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 90%;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 10;
+	filter: saturate(0.6);
 }
 
 .header-animation {
-    position: relative;
+	position: relative;
 }
 
 .arrow {
-    position: absolute;
-    transform: rotate(90deg);
-    font-size: 5rem;
-    animation: header-arrows 1.4s linear infinite;
-    text-shadow: 5px 5px 10px rgb(37, 37, 37);
+	position: absolute;
+	transform: rotate(90deg);
+	font-size: 5rem;
+	animation: header-arrows 1.4s linear infinite;
+	text-shadow: 5px 5px 10px rgb(37, 37, 37);
 }
 
 .arrow a {
-    position: relative;
-    color: #ffffffe0;
-    text-decoration: none;
-    overflow: hidden;
+	position: relative;
+	color: #ffffffe0;
+	text-decoration: none;
+	overflow: hidden;
 }
 
-
 .header {
-    position: sticky;
-    height: 10vh;
-    top: 0px;
-    width: 100%;
-    background-color: #fff;
-    z-index: 5;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -20px;
+	position: sticky;
+	height: var(--header-height);
+	top: 0px;
+	width: 100%;
+	background-color: #fff;
+	z-index: 5;
+	box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -20px;
 }
 
 .header__circle {
-    position: absolute;
-    top: -70px;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
+	position: absolute;
+	top: -70px;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
 
-    border: 10px solid #fff;
+	border: 10px solid #fff;
 
-    background-image: url('../img/st_Joseph.jpg');
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: 10px 50px;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -20px;
+	background-image: url("../img/st_Joseph.jpg");
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position: 10px 50px;
+	box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -20px;
 }
 
 h1 {
-    position: relative;
-    left: 40px;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 3.6rem;
-    letter-spacing: 5px;
-    color: #333;
+	position: relative;
+	left: 40px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 3.6rem;
+	letter-spacing: 5px;
+	color: #333;
 }
 
 @keyframes header-arrows {
-    0% {
-        bottom: 10px;
-    }
-    
-    25% {
-        bottom: 15px;
-    }
-    
-    50% {
-        bottom: 10px;
-    }
-    
-    75% {
-        bottom: 0px;
-    }
-    
-    100% {
-        bottom: 10px;
-    }
+	0% {
+		bottom: 10px;
+	}
+
+	25% {
+		bottom: 15px;
+	}
+
+	50% {
+		bottom: 10px;
+	}
+
+	75% {
+		bottom: 0px;
+	}
+
+	100% {
+		bottom: 10px;
+	}
 }
 
 /* MAIN */
 
 main {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 /* SECTIONS */
 
 section {
-    position: relative;
-    padding: 60px 0;
-    min-height: 40vh;
+	position: relative;
+	padding: 60px 0;
+	min-height: 40vh;
 }
 
-
 .inner::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: var(--inner-shadow-height);
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    z-index: 1;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: var(--inner-shadow-height);
+	width: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+	z-index: 1;
 }
 
 .inner::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: var(--inner-shadow-height);
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    z-index: 1;
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: var(--inner-shadow-height);
+	width: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+	z-index: 1;
 }
 
 .section-hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .section-text {
-    position: relative;
-    width: fit-content;
-    padding: 45px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	position: relative;
+	width: fit-content;
+	padding: 45px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
-    color: #fff;
-    max-width: 60%;
+	color: #fff;
+	max-width: 60%;
 
-    /* border: 1px solid orange; */
+	/* border: 1px solid orange; */
 }
 
 .section-text h3 {
-    margin-bottom: 40px;
+	margin-bottom: 40px;
 
-    text-transform: uppercase;
-    font-size: 4rem;
-    letter-spacing: 5px;
-
+	text-transform: uppercase;
+	font-size: 4rem;
+	letter-spacing: 5px;
 }
 
-.section-text p
-,.section-text ul {
-    font-size: 2.5rem;
+.section-text p,
+.section-text ul {
+	font-size: 2.5rem;
 }
 
 .section-text ul li {
-    list-style: none;
-    margin-left: 20px;
-    padding: 20px 0 0 0;
+	list-style: none;
+	margin-left: 20px;
+	padding: 20px 0 0 0;
 }
 
 .title {
-    font-size: 3rem;
+	font-size: 3rem;
 }
 
 /* SECTIONS - NEWS */
 
 .news {
-    background-color: #e7e7e7;
+	background-color: #e7e7e7;
 }
 
 .news ul li {
-    position: relative;
-    font-size: 2rem;
-    margin-top: 15px;
-    margin-left: 20px;
-    list-style: none;
-    line-height: 3rem;
+	position: relative;
+	font-size: 2rem;
+	margin-top: 15px;
+	margin-left: 20px;
+	list-style: none;
+	line-height: 3rem;
 }
 
 /* SECTIONS - HOLY MASSES */
 
 .holy-masses {
-    background-image: url('../img/holy_mass.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: -25vw 0;
+	background-image: url("../img/holy_mass.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: -25vw 0;
 }
 
 .section-hero--holy-masses {
-    background-image: linear-gradient(to right,
-        rgba(134, 34, 34, 0.05), rgb(134, 34, 34) 40%
-        ,rgb(134, 34, 34) 40%);
+	background-image: linear-gradient(
+		to right,
+		rgba(134, 34, 34, 0.05),
+		rgb(134, 34, 34) 40%,
+		rgb(134, 34, 34) 40%
+	);
 }
 
 .holy-masses .section-text p {
-    font-size: 2rem;
+	font-size: 2rem;
+}
+
+/* SECTIONS - CARDS */
+
+.card-container {
+	position: relative;
+	width: 20%;
+	height: 20vh;
+	margin-right: 20px;
+	perspective: 500px;
+}
+
+.card {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 30px 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: transform .7s linear, opacity .7s linear;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card__photo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.card__photo--announcements {
+	background-color: lime;
+}
+
+.card__text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 5px 10px;
+	background-color: #fff;
+}
+
+.card-a {
+	opacity: 1;
+}
+
+.card-b {
+	background-color: #e5d5d5;
+	transform: rotateX(-180deg);
+	opacity: 0;
+}
+
+.card-container:hover .card-a {
+	transform: rotateX(180deg);
+	opacity: 0;
+}
+
+.card-container:hover .card-b {
+	transform: rotateX(0);
+	opacity: 1;
 }
 
 /* SECTIONS - SERVICES */
 
 .services {
-    background-image: url('../img/services.JPG');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 45vw 0;
+	background-image: url("../img/services.JPG");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 45vw 0;
 }
 
 .section-hero--services {
-    background-image: linear-gradient(to left,
-        rgba(34, 57, 134, 0.05), rgb(34, 57, 134) 40%
-        ,rgb(34, 57, 134) 40%);
+	background-image: linear-gradient(
+		to left,
+		rgba(34, 57, 134, 0.05),
+		rgb(34, 57, 134) 40%,
+		rgb(34, 57, 134) 40%
+	);
 }
 
 /* SECTIONS - CONFESSION */
 
 .confession {
-    background-image: url('../img/confession.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+	background-image: url("../img/confession.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .section-hero--confession {
-    background-image: linear-gradient(to right,
-        rgba(87, 34, 134, 0.05), rgba(87, 34, 134) 40%
-        ,rgba(87, 34, 134) 40%);
+	background-image: linear-gradient(
+		to right,
+		rgba(87, 34, 134, 0.05),
+		rgba(87, 34, 134) 40%,
+		rgba(87, 34, 134) 40%
+	);
 }
 
 /* TECHNICAL */
 
 .break {
-    position: absolute;
-    border-left-width: 1px;
-    border-left-color: red;
-    border-right-width: 1px;
-    border-right-color: red;
-    height: 500vh;
-    z-index: 100;
-    left: 50%;
-    transform: translateX(-50%);
+	position: absolute;
+	border-left-width: 1px;
+	border-left-color: red;
+	border-right-width: 1px;
+	border-right-color: red;
+	height: 500vh;
+	z-index: 100;
+	left: 50%;
+	transform: translateX(-50%);
 
-    display: none;
+	display: none;
 }
 
 .break-1400 {
-    width: 1400px;
-    border-left-style: solid;
-    border-right-style: solid;
+	width: 1400px;
+	border-left-style: solid;
+	border-right-style: solid;
 }
 
 .break-1200 {
-    width: 1200px;
-    border-left-style: solid;
-    border-right-style: solid;
+	width: 1200px;
+	border-left-style: solid;
+	border-right-style: solid;
 }
 
 .break-992 {
-    width: 992px;
-    border-left-style: solid;
-    border-right-style: solid;
+	width: 992px;
+	border-left-style: solid;
+	border-right-style: solid;
 }
 
 .break-576 {
-    width: 576px;
-    border-left-style: solid;
-    border-right-style: solid;
+	width: 576px;
+	border-left-style: solid;
+	border-right-style: solid;
 }

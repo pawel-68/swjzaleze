@@ -15,7 +15,15 @@
     <div class="break break-992"></div>
     <div class="break break-576"></div>
 
-    <nav class="nav">
+    <div class="burger-menu-container">
+        <div class="container h-100-p display-flex flex-end flex-align-center">
+            <button class="burger-menu" id="burger-menu">
+                <div class="burger-menu__bars" id="burger-menu__bars"></div>
+            </button>
+        </div>
+    </div>
+
+    <nav class="nav" id="nav">
         <div class="main-menu-container display-flex flex-center flex-align-center">
             <ul class="main-menu__list display-flex flex-column flex-around">
                 <li><a href="">Aktualności</a></li>
@@ -30,11 +38,9 @@
         </div>
     </nav>
 
-    <div class="first-screen display-flex flex-align-end">
-        <div class="container display-flex flex-center">
-            <div class="header-animation">
-                <p class="arrow"><a href="#header">⮞</a></p>
-            </div>
+    <div class="first-screen display-flex flex-align-end flex-center">
+        <div class="header-animation">
+            <p class="arrow"><a href="#header">⮞</a></p>
         </div>
     </div>
 
@@ -89,7 +95,21 @@
             </div>
         </section>
 
-        <section class="cards"></section>
+        <section class="cards display-flex flex-align-center" id="cards">
+            <div class="container display-flex flex-around flex-align-center">
+
+                <div class="card-container">
+                    <div class="card card-a">
+                        <div class="card__photo card__photo--announcements"></div>
+                        <div class="card__text"><p>Ogłoszenia duszpasterskie</p></div>
+                    </div>
+                    <div class="card card-b card-b--announcements">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit voluptas rerum molestiae, maxime perspiciatis ea ab ullam aliquid laboriosam similique, pariatur a, earum tempore culpa ipsum qui enim eveniet!
+                    </div>
+                </div>
+                
+            </div>
+        </section>
         
         <section class="services inner" id="services">
             <div class="section-hero section-hero--services"></div>
@@ -150,5 +170,7 @@
     <footer>
 
     </footer>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
