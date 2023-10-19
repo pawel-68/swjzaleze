@@ -350,7 +350,7 @@ section {
 	content: "";
 	display: block;
 	position: absolute;
-	bottom: 0;
+	bottom: 0px;
 	left: 0;
 	height: var(--inner-shadow-height);
 	width: 100%;
@@ -441,7 +441,76 @@ section {
 	font-size: 2rem;
 }
 
-/* SECTIONS - CARDS */
+/* SECTIONS - PODPORA */
+
+.podpora {
+	height: 360px;
+}
+
+.magazine {
+	position: absolute;
+	left: 70vw;
+	top: -5%;
+	width: auto;
+	width: 280px;
+	height: 110%;
+	perspective: 500px;
+	z-index: 2;
+}
+
+.magazine__page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	transition: transform .6s ease-out;
+	transform: rotateX(10deg) rotateY(-20deg);
+}
+
+.magazine__page--cover {
+	z-index: 4;
+}
+
+.magazine:hover .magazine__page--cover {
+	transform: translateX(-20%) rotateX(6deg) rotateY(-6deg);	
+}
+
+.magazine__page--contents {
+	z-index: 3;
+}
+
+.magazine:hover .magazine__page--contents {
+	transform: translateX(30%) rotateY(-2deg) rotateZ(10deg);	
+}
+
+.magazine__page img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+/* SECTIONS - SERVICES */
+
+.services {
+	background-image: url("../img/services.JPG");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 45vw 0;
+}
+
+.section-hero--services {
+	background-image: linear-gradient(
+		to left,
+		rgba(34, 57, 134, 0.05),
+		rgb(34, 57, 134) 40%,
+		rgb(34, 57, 134) 40%
+	);
+}
+
+/* SECTIONS - PAYMENTS */
 
 .card-container {
 	position: relative;
@@ -501,25 +570,6 @@ section {
 .card-container:hover .card-b {
 	transform: rotateX(0);
 	opacity: 1;
-}
-
-/* SECTIONS - SERVICES */
-
-.services {
-	background-image: url("../img/services.JPG");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: 45vw 0;
-}
-
-.section-hero--services {
-	background-image: linear-gradient(
-		to left,
-		rgba(34, 57, 134, 0.05),
-		rgb(34, 57, 134) 40%,
-		rgb(34, 57, 134) 40%
-	);
 }
 
 /* SECTIONS - CONFESSION */
